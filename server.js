@@ -13,7 +13,7 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 // Connect to MongoDB
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/digi-albums';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://johndoefreetrials:JohnDoe2511@cluster17.gvuz4v8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster17';
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
